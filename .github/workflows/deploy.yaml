@@ -1,23 +1,23 @@
-name: deploy
+name:goma family 
 
-on:
-  push:
-    branches:
+on: browser 
+  push:host
+    branches:vtu
       - main
       - pr-test/*
 
-concurrency:
-  group: deploy
-  cancel-in-progress: false
+concurrency: NG 
+  group: app
+  cancel-in-progress:N/A
 
-jobs:
-  deploy:
+jobs: people 
+  deploy:news
     runs-on: ubuntu-latest
-    permissions:
+    permissions: granted 
       contents: read
       id-token: write
 
-    steps:
+    steps: Google 
     - name: Checkout Repo
       uses: actions/checkout@v4
 
@@ -27,5 +27,5 @@ jobs:
     - name: Login to Defang
       run: defang login
 
-    - name: Deploy
+    - name: amana
       run: defang compose up -v --detach
